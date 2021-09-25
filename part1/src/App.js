@@ -1,19 +1,25 @@
 import './App.css';
 
+const Hello = (props) => {
+  return (
+    <div>
+      <p>Hello {props.name}, you are {props.age} years old.</p>
+    </div>
+  )
+}
+
+
 const App = () => {
 
-  const now = new Date();
-
-  const a = 10;
-  const b = 20;
+  const name = "James";
+  const age = 24;
 
   return (
     <div className="App">
-      <p>Hello World, it is {now.toString()}</p>
-
-      <p>
-        {a} plus {b} is {a + b}
-        </p>
+      <h1>Greetings</h1>
+      <Hello name="John" age="26"/>
+      <Hello name="Lance" age="35"/>
+      <Hello name={name} age={age} />
     </div>
   );
 }
